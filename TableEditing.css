@@ -1,0 +1,18 @@
+table,th,td{
+    border:1px solid;
+    border-collapse: collapse;
+    width: 30%;
+    padding: 10px; /* padding is used for creating space between some elements */
+}
+th{
+    background-color: blue;
+    height: 50px;
+}
+td{
+    text-align: center;
+}
+ /*there is a process where we can highlight the row our mouse cursor is hovoring */
+
+tr:hover{
+    background-color: yellow;
+}

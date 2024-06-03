@@ -1,0 +1,52 @@
+#heading{
+    color:blue;
+    background-color: yellow;
+    text-align:center;
+}
+#name{
+    text-align:center;
+}
+#joy{
+    text-align: justify; /* dont have a clear idea of what justify does */
+}
+#tal{
+    text-align-last: center;
+}
+#vertical{
+    vertical-align: top;
+}
+#decoration{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+#lt{
+    text-decoration-line:line-through;
+    text-decoration-color: red;
+}
+#ol{
+    text-decoration-line: overline;
+}
+h3{
+    text-decoration: underline blue solid 10px;
+}
+#uc{
+    text-transform: uppercase;
+}
+#cl{
+    text-transform: capitalize;
+}
+#indent{
+    text-indent: 50px; /*we can use px and percentage in indent */
+    letter-spacing: 10px;
+}
+#fs{
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+#fsa{
+    font-family: "Arial", "Helvetica","serif"; /* there is no need to use the whole style name. If you just use 'Arial' it will also work */
+    font-weight: bold;
+}
+#nm{
+    font-size: 50px; /* there is some measurement values in css like 'px' 'em' , em has much higher value than px */
+}

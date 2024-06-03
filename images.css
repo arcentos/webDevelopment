@@ -1,0 +1,92 @@
+    img{
+        display:block;
+    }
+    body{
+        min-height:100vh;
+        background-color: aliceblue;
+        /* background-image: url(https://i.pinimg.com/736x/93/df/a6/93dfa600df83c9650be6673de114e82e.jpg),   linear-gradient(to left, steelblue,white); */
+        
+        /* Notes
+        linear gradient applies a smooth trangition between two or more mentioned color.
+        It also has the command to flow from a side to a side . for that we have to put the command at the beginneing like this: background-image: linear-gradient(to right,steelblue,white);
+        */
+       
+        /*  background-repeat: repeat-y, no-repeat;
+        background-position:right center;
+        background-size: 20% auto; */
+        
+    }
+    .example{
+        margin-top:1rem;
+        padding-left:20px;
+        border:1px solid red;
+    }
+    .example img{
+        width:25%;
+        height:auto;
+    }
+
+    /* Utility Classes*/
+    .nowrap{
+        white-space: nowrap;
+    }
+    .offscreen{
+        position:absolute;
+        left:-10000px;
+    }
+    /*End Utility Classes*/
+
+    .container{
+        /* we can put the background color image and repeat section in here */
+        
+    }
+
+    .hero{
+        border-bottom:2px solid black;
+        padding: 20px;
+        display:flex;
+        justify-content: flex-start;
+        align-items:center;
+        gap: 30px;
+
+        background-color: hsla(34, 92%, 80%, 0.326);
+        background-image: url('https://wallpapercave.com/wp/wp3307437.jpg');
+        background-repeat: repeat; /* we can set it to repeat , repeat-y,repeat-x --here x and y means axis */
+        background-size:cover;
+        background-position: center center; /*  the first value is for x axis and the second is for y axis
+        //it has various values like top bottom left right
+        */
+    
+    }
+    .h1{
+        font-size:500%;
+        color:aliceblue;
+        text-shadow: 2px 2px 5px black; /* the first value is for x axis , the second value is for y axis and the third value is for how much shadow we want and the last is the color */
+        background-color: hsla(0, 0%, 100%, 0.392);/* the background color can be transparent . For details check timeline 5:15:00 */
+        padding: 5px;
+    }
+    .profile-pic-figure{
+        width:35%
+    }
+    .profile-pic-figure img{
+        width:100%;
+        height:auto;
+        min-width:100px;    
+        border:5px double gray;
+        border-radius:50%;
+    }
+
+    .clip{
+        font-weight:800;
+        font-size:18rem;
+        text-align: center;
+        background-image: url(https://cdnb.artstation.com/p/assets/images/images/030/362/979/large/dawid-znaj-2020-09-17-19-44-04-window.jpg?1600365543);
+        text-transform:uppercase;
+        background-size:100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color:hsla(0, 0%, 0%, 0.178);/* we can set this to 'transparent as well . If we do that the color will be lightened' */
+
+        /* This is important to know that -webkit-background-clip only support on google . To know more visit 'can I use.com' */
+    }
+

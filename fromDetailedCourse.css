@@ -1,0 +1,28 @@
+.block{
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    color: black;
+    padding: 1rem;
+    margin-right: 5px;
+}
+.right{
+    float: left;
+}
+.clear{
+    clear:both;
+}
+#coverPage{
+    background-color: purple;
+    border: 1px solid black;
+    padding:1rem;
+    overflow: auto; /* we can use overflow or display flow root to fill the centered area vdo time line - 3:12:00*/
+    display: flow-root;
+}
+
+.columns{
+    column-width: 250px;
+    column-rule: 3px solid black;
+    column-gap:300px;
+} 
+

@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:1.5rem;
+    font-family:'Nunito',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-flow:column nowrap;
+}
+main{
+    flex-grow:1;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    border:1px solid #000;
+    display:grid;
+    place-content:center;
+}
+
+
+div:first-child{
+    background-color: dodgerblue;
+    /*transform:translateX(-50%);
+    *//*itcanbepositiveornegetive*//*transform: rotateX(180deg);
+    *//*whenthevalueis90degtheimagedisapperscausethenweseethepictureonitsflatsurface*//*transform: scaleX(120%);
+    */
+    /* transform:skewX(-10deg)  ; */
+ 
+}
+div:nth-child(2){
+     background-color: yellow;
+     /*transform: translateY(-2rem);
+     *//*itcanalobenegetive*/transform: rotateY(180deg);
+     /*transform: scaleY(120%);
+     */
+     /* transform: skewY(-10deg); */
+
+}
+
+div:nth-child(3){
+    background-color: limegreen;
+    /*transform:translate(100%,-5rem);
+    *//*transform: rotateZ(78deg);
+    *//*transform: scale(50%,50%);
+    */
+    /* transform: skew(-10deg,-10deg); */
+
+}
+
+div:hover{
+    background-color: midnightblue;
+    /*transition-property: background-color,transform;
+    transition-duration: 2s,3s;
+    transition-delay: 0.5s;
+    *//*wecanalsocombineandthecodeiswrittenbelow*/
+    transition:all 2s 0.5s ;
+
+    transition-timing-function: ease; /* with this the transtition starts slow and also end slow */
+    /* we can also add this property in transition all function after the duration value */
+
+}
+
+div:last-child:hover{
+    transform:rotate(180deg);
+}
+
+.animate{
+    animation-name:slide;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay:1s;
+    animation-iteration-count:2;
+    animation-direction: normal;
+    /*when the value is alternate that means in the first iteration it will go forword and then in the second duration it will start the animation backwards*/
+    animation-fill-mode: forwards;
+    /*it will not work if the animation-direction is set to alternate*/
+
+
+    /*all of this property can be set in one line like below*/
+    animation: 10s ease-in-out 1s 2 normal forwards slide;
+    -webkit-animation: 5s ease-in-out 1s 2 normal forwards slide;
+    /* in the animation property the values are sequentially animaton-duration->animation-timing-function->animation-delay->animation-iteration-count->animation-direction->animation-fill-mode */
+}
+
+@keyframes slide {
+    0%{
+        transform:translateX(0);
+        -webkit-transform:translateX(0);
+        -moz-transform:translateX(0);
+        -ms-transform:translateX(0);
+        -o-transform:translateX(0);
+        background-color: red;
+}
+    20%{
+        transform: translateX(300px) rotate(180deg);
+        -webkit-transform: translateX(300px) rotate(180deg);
+        -moz-transform: translateX(300px) rotate(180deg);
+        -ms-transform: translateX(300px) rotate(180deg);
+        -o-transform: translateX(300px) rotate(180deg);
+        background-color: black;
+}
+    33%{
+        transform: translateX(600px) rotate(360deg);
+        -webkit-transform: translateX(600px) rotate(360deg);
+        -moz-transform: translateX(600px) rotate(360deg);
+        -ms-transform: translateX(600px) rotate(360deg);
+        -o-transform: translateX(600px) rotate(360deg);
+        background-color: blue;
+}
+    66%{
+        transform: translateX(-600px) rotate(-360deg);
+        -webkit-transform: translateX(-600px) rotate(-360deg);
+        -moz-transform: translateX(-600px) rotate(-360deg);
+        -ms-transform: translateX(-600px) rotate(-360deg);
+        -o-transform: translateX(-600px) rotate(-360deg);
+        background-color: yellow;
+}
+    86%{
+        transform: translateX(-300px) rotate(-180deg);
+        -webkit-transform: translateX(-300px) rotate(-180deg);
+        -moz-transform: translateX(-300px) rotate(-180deg);
+        -ms-transform: translateX(-300px) rotate(-180deg);
+        -o-transform: translateX(-300px) rotate(-180deg);
+        background-color: black;
+}
+    100%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+
+        background-color: rebeccapurple;
+}
+
+}
+
+/* .hello{
+    animation-name: test;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay:1s;
+    animation-iteration-count:5;
+}
+
+@keyframes test {
+    0%{
+        transform:translateY(0)    ;
+        -webkit-transform:translateY(0)    ;
+        -moz-transform:translateY(0)    ;
+        -ms-transform:translateY(0)    ;
+        -o-transform:translateY(0)    ;
+}
+    33%{
+        transform: translateY(600px) rotate(180deg);
+        -webkit-transform: translateY(600px) rotate(180deg);
+        -moz-transform: translateY(600px) rotate(180deg);
+        -ms-transform: translateY(600px) rotate(180deg);
+        -o-transform: translateY(600px) rotate(180deg);
+}
+    66%{
+        transform: translateY(-600px) rotate(-180deg);
+        -webkit-transform: translateY(-600px) rotate(-180deg);
+        -moz-transform: translateY(-600px) rotate(-180deg);
+        -ms-transform: translateY(-600px) rotate(-180deg);
+        -o-transform: translateY(-600px) rotate(-180deg);
+}
+    100%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        background-color: rebeccapurple;
+}
+
+} */

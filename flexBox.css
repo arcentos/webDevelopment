@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    min-height:100vh;
+    padding:20px;
+}
+.container{
+    max-width:800px;
+    min-height:400px;
+    margin-inline:auto;
+    border:1px solid black;
+    display:flex;
+    gap:1rem;
+    justify-content:space-around; /* we use this to move the element horizontally*/
+
+    /*
+    1. flex-start puts it to the start
+    2.flex-end puts the div element to the end part of the container
+    3.flex-center put to the center likewise
+    4.space-arond puts border around the div class
+    5.space-between only put space between the div element not around
+    6.space-evenly is a balanced pattern for evenly place the element
+    */
+    align-items: center;
+    /*
+    align property move the box element vertically
+    */
+    flex-direction:row;
+    /*
+    there are several property like row, row-reversed , coloum-reversed
+    */
+    flex-wrap:wrap; /* it helps resizing the window in inspect window*/
+    /*we can actually combine the direction and the wrap and the property will be flex-flow*/
+    /* there is another property like justify-content called align-content which does the same work*/
+}
+.box{
+    min-width:100px;/* instead of using min-width we can use flex-basis property. they do the same work */
+    height: 100px;
+    background-color: black;
+    color:white;
+    font-size:2rem;
+    padding:0.5rem;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-grow:1; /*    this is used when we want to fill the width of the page */
+}
+
+.box:nth-child(3){ /* this is how we select a specific element from several element */
+    flex-grow: 2;/* when we want a element to take more space  than the others we use flex-g to 2  */
+    /* just like grow we also have shrink property which does the opposite */
+    /* we can also combine grow,shrink and width together
+    the format will be flex: grow value,shrink value,width value*/
+    order:3; /* order property use when we want to change the position of the element */
+}

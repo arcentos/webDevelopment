@@ -1,0 +1,11 @@
+ol{
+    list-style-type: lower-roman;
+}
+ul{
+    text-align: right;
+    list-style-type: square;
+}
+::marker{
+    
+    content: "this will be in the place of bullet";
+}

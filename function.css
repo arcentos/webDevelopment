@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+*{
+    margin:0;
+    padding:5px;
+    box-sizing: border-box;
+}
+
+:root
+{ /* this is a psudo class */
+    /* This is the variable for colors */
+    --BGCOLOR: #475569;
+    --ALT-BGCOLOR:#1E293B;
+    --RADIAL-COLOR:whitesmoke;
+    /* This is the variable for fonts */
+    --FF:"Nunito",sans-serif;
+    --FS:min(2.25rem,vh); /* we can use max and clamp function , max fuction consists of a ideal value and a max value and the clamp function consists of a min max and an ideal value as well . it only shows effect while shrinking the size ofthe display of the screen size in inspect mode  */
+    --FS-XL:3rem;
+    /* Basically we can put anything in a variable like padding , box-shadow (It is advising to use box-shadow in project mandatarily cause it would be awkward if the sun shadow in different areas in your project)) 
+    
+    We can also put a variable name in another variable like --BGTRAIL: 1.5 --ALT-BGCOLOR
+    */
+
+    /* FOR SQUARE ELEMENT */
+    --SQUARE-SIZE:max(150px,20vw);
+    --SQUARE-BGCOLOR:papayawhip;
+}
+
+
+@media (prefers-color-scheme: light){ /* you can set the prefers-color-scheme to dark/light for different effect 
+And this light and dark effect is set for browser , pc settings as well    */
+    :root
+    {
+        --BGCOLOR:#000;
+        --ALT-BGCOLOR:#333;
+        --RADIAL-COLOR:rgb(216, 216, 216);
+        --SQUARE-BGCOLOR:rgb(202,174,202);
+    }
+}   
+
+body
+{
+    font:var(--FS)var(--FF);    
+    min-height:100vh;
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(var(--RADIAL-COLOR),var(--BGCOLOR));
+    display:flex;
+    flex-direction:column;  
+}
+
+/* Syntax
+@media media type and (condition:breakpoint){
+    //css rules
+} */
+
+header,nav,footer
+{
+    display:grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,footer
+{
+    position:sticky;
+    background-color: var(--ALT-BGCOLOR);
+    color:var(--RADIAL-COLOR);
+}
+
+header
+{
+    top:0;
+}
+
+nav
+{
+    background-color: var(--RADIAL-COLOR);
+    color:#000; 
+    padding:0.5rem;
+    border-bottom:2px solid #000;
+    box-shadow: 0 6px 5px -5px black;/* first value = x offset 
+                                          second value = y offset
+                                          3rd value = blur value
+                                          4th value = spread value 
+                                          5th value = color */
+}
+
+main
+{
+    flex-grow:1;
+    /* padding:10px 0;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row-wrap;
+    gap:min(4vw,15px); */
+
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: flex-start;
+}
+footer
+{
+    bottom:0;
+}
+
+a:any-link
+{
+    color:firebrick
+}
+
+a:hover,a:focus
+{
+    /*opacity: 0.3;
+    *//*while applying opacity the selected element will fade*/
+    filter:brightness(200%); /* we can also use a function called hue-rotate(value"deg") for other effects */
+}
+
+.tooltip
+{
+    border-bottom:5px dashed orange;
+    position:relative;
+}
+
+.tooltip:hover::before{
+    content:attr(data-tooltip);
+}
+
+.square
+{
+    background-color: var(--SQUARE-BGCOLOR);
+    width:var(--SQUARE-SIZE);
+    height:var(--SQUARE-SIZE);
+    border:2px solid black;
+    border-radius: 15px;
+    display:grid;
+    place-content:center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0 6px 5px -5px black;
+    font-size:var(--FS-XL);
+}
+
+.square--highlight
+{
+    background-color: cornflowerblue;
+}
+
+@media screen and (min-width:576px) 
+{
+    main{
+        flex-flow:row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width:calc(70%-5px)
+    }
+
+    main aside{
+        width:calc(30%-5px)
+    }
+}
+
+aside
+{
+    background-color: #475569;
+    color: white;
+    
+}
+
+.content
+{
+    margin-top: 20px;
+}

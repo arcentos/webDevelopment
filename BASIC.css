@@ -1,0 +1,68 @@
+/* An important concept that when we want to use a css file in an html file in html head tag in the href part we have to write folder name/css file name */
+
+body {
+    background-color:white;
+    border-style:solid;
+    border-color: blue;
+}
+h2{
+    color: blue ;
+}
+
+pre{
+    background-color: red;
+    color: blue;
+}
+h3{
+    background-color: white;
+}
+#hello{
+    background-color: purple;
+}
+.hi{
+    color: blue;
+    background-color: yellow;
+}
+/* we have to put both the html and the css file in the same folder also this is how we write a commment in css */
+
+/* there is a command called margin in css which helps to specify a location where i want to put a text */
+h4{
+    /*margin-left: 45%; */
+    margin-top: 20%; /* in case of size increasing there is one precess called rem and em .. when we use em after rem this enlarge the font */
+
+    /* there is a good practice where we select the font size in rem and the padding in em*/
+    margin-left: 150px;
+
+    /*px is a samller value in measurement than percnetage in css 
+    we can also mention all four dimention in one cmd , the sequence of the dimentions will be top->right->bottom->left*/
+}
+#border{
+    border-style: outset;
+    border-color: black;
+    border-width: 5px;
+    border-radius:50px ;
+    /*there are several types of border in css like dotted,dashed,lineetc.we can also change the width of the border and also the colour.to change the width of the border we can use border-width command,we can also specify defferent sides.*/
+}
+#together{
+    border-bottom: 3px dashed navy;
+}
+
+#padding{
+    border-style: dashed;
+    border-radius: 20px;
+    padding-top:20px;
+}
+
+/* while we want to set the number of words in each line we use 'ch' tag */
+#height{
+    height: 90px;
+    width: 100%;
+    background-color: blue;
+}
+#outlines{
+    outline-color:orange ;
+    outline-style: solid;
+    border:2px solid blue;
+    outline-offset: 5px;
+}
+
